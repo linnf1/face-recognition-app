@@ -1,5 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+	font-family: 'Karla', sans-serif;
+  background: linear-gradient(to bottom right, #845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f); /* Standard syntax */
+  height:1150px;
+  margin: 0 auto;
+  padding: 0px;
+	position:relative; 
 }

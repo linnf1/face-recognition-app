@@ -1,0 +1,10 @@
+.Tilt {
+	background: linear-gradient(to top right, #845ec2,#d65db1,#ff6f91,#ff9671,#ffc75f); /* Standard syntax */
+}
+.Tilt-inner {
+	padding-top: '5px';
+}
+img {
+	height: 200%;
+	width: 200%;
+}
