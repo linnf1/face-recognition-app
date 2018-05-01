@@ -1,14 +1,4 @@
-## Notes to self..
-```
-    app.models
-    .predict(
-    Clarifai.COLOR_MODEL,
-        // URL
-        "https://samples.clarifai.com/metro-north.jpg"
-    )
-    .then(function(response) {
-        // do something with responseconsole.log(response);
-        },
-        function(err) {// there was an error}
-    );
-    ```
+#Face Detection Application
+*_Web application for face recongtion game ,where users climb up the ranks for feeding the most faces into it._*
+
+![Screenshot](facerec.png)
