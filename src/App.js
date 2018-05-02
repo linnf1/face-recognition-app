@@ -7,12 +7,14 @@ import Rank from './components/Rank/Rank'
 import Particles from 'react-particles-js';
 import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
-import Signin from './components/Signin/Signin'
-import Register from './components/Register/Register'
-import apiKeySECRET from './.secret'
+import Signin from './components/Signin/Signin';
+import Register from './components/Register/Register';
+
+const apiKeySECRET = require('./secret.js')
+
 
 const app = new Clarifai.App({
- apiKey: apiKeySECRET
+ apiKey: apiKeySECRET.apiKeySECRET
 });
 
 
