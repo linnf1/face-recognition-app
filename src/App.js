@@ -85,8 +85,14 @@ class App extends Component {
 //If you get BAD REQUEST check set states , you are calling it wrong somewhere. (like after COLORMODEL)
   onButtonSubmit = () => {
     this.setState({imageurl: this.state.userinput});
-   app.models
-   .predict(Clarifai.FACE_DETECT_MODEL, this.state.userinput)
+      fetch('http://localhost:3000/imageurl', {
+        method: 'post',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+        input: this.state.userinput
+        })
+      })
+      .then(response => response.json())
     .then(response => {
       if (response) {
         fetch('http://localhost:3000/image', {
