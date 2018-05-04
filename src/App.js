@@ -5,18 +5,9 @@ import Logo from './components/Logo/Logo';
 import ImageLinkForm from './components/ImageLinkForm/ImageLinkForm'
 import Rank from './components/Rank/Rank'
 import Particles from 'react-particles-js';
-import Clarifai from 'clarifai';
 import FaceRecognition from './components/FaceRecognition/FaceRecognition';
 import Signin from './components/Signin/Signin';
 import Register from './components/Register/Register';
-
-const apiKeySECRET = require('./secret.js')
-
-
-const app = new Clarifai.App({
- apiKey: apiKeySECRET.apiKeySECRET
-});
-
 
 const PartOpts = {
 particles: {
@@ -85,7 +76,7 @@ class App extends Component {
 //If you get BAD REQUEST check set states , you are calling it wrong somewhere. (like after COLORMODEL)
   onButtonSubmit = () => {
     this.setState({imageurl: this.state.userinput});
-      fetch('http://localhost:3000/imageurl', {
+      fetch('https://smart-brain-lf.herokuapp.com/imageurl', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
@@ -95,7 +86,7 @@ class App extends Component {
       .then(response => response.json())
     .then(response => {
       if (response) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://smart-brain-lf.herokuapp.com/image', {
         method: 'put',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
